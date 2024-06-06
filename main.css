@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #fefae0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+
+.container form{
+    max-width: 300px;
+    width: 100%;
+}
+
+.container label{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #6c757d;
+}
+
+.container form input{
+    padding: 5px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.container form button{
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffbf69;
+    font-size: 20px;
+    font-weight: 600;
+    color: #343a40;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+}
+
+.container .mensagem-falha{
+    opacity: 0;
+    max-width: 300px;
+    width: 100%;
+    background-color: #f94144;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 16px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.container .mensagem-sucesso{
+    opacity: 0;
+    max-width: 300px;
+    width: 100%;
+    background-color: #43aa8b;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 16px;
+    text-align: center;
+    border-radius: 5px;
+}
