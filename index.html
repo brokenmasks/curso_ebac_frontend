@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Lista de tarefas</h1>
+        </header>
+        <form>
+            <input id="campo-add-task" type="text" placeholder="Nome da tarefa" required>
+            <button id="btn-add-task" type="submit">Cadastrar</button>
+        </form>
+        <ul style="display: none;" id="ul-tasks">
+          
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
