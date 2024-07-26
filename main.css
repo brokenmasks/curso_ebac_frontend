@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    background-color: #f5ebe0;
+}
+
+.container {
+    height: 100%;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.form-label {
+    margin-top: 12px;
+}
+
+.btn {
+    margin-top: 18px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+}
