@@ -1,0 +1,112 @@
+@use 'config/reset.scss';
+@use 'config/cores.scss';
+@use 'config/brakepoints.scss';
+
+
+body {
+    background-color: cores.$corBgGeral;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: cores.$corBgHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        .menu {
+            display: flex;
+
+            li {
+                font-weight: bold;
+                margin-left: 24px;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    .container {
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 32.66%);
+            column-gap: 1%;
+            row-gap: 4%;
+            width: 100%;
+            margin-top: 40px;
+    
+            .product-item {
+                img {
+                    width: 100%;
+                    border-radius: 16px;
+                }
+                
+                .product-button {
+                    display: block;
+                    background-color: cores.$corBgBtn;
+                    color: #fff;
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 8px 0;
+                    border-radius: 8px;
+                    margin-top: 8px;
+    
+                    &:hover {
+                        background-color: cores.$corBgBtnHover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: brakepoints.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    section {
+        .container {
+            .products {
+                grid-template-columns: repeat(2, 48.5%);
+                column-gap: 3%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: brakepoints.$mobile) {
+    section {
+        .container {
+            .products {
+                display: block;
+        
+                .product-item {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}
