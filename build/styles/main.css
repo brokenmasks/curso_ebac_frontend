@@ -1,0 +1,16 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #b6b6b6;
+}
+body h1 {
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.bg {
+  background-color: #ff2;
+}
+/*# sourceMappingURL=maps/main.css.map */

@@ -1,0 +1,1 @@
+let corpo=document.getElementById("corpo"),titulo=document.getElementById("titulo");titulo.addEventListener("click",function(){corpo.classList.toggle("bg")});
