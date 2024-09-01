@@ -1,0 +1,115 @@
+@import "variaveis.less";
+@import "mapa.less";
+
+
+@breakpointTablet: ~"(max-width: 1023px)";
+@breakpointMobile: ~"(max-width: 767px)";
+
+
+.padding(@valor1: 8px) {
+    padding: @valor1 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: @bgColor;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+}
+
+header {
+    background: @bgHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .padding(@valor1: 16px);
+
+        .menu {
+            display: flex;
+
+            li {
+                font-weight: bold;
+                margin-left: 24px;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+section {
+    .padding(@valor1: 56px);
+
+    .container {
+        .product {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 32.66%);
+            column-gap: 1%;
+            row-gap: 4%;
+            width: 100%;
+
+            @media @breakpointTablet {
+                grid-template-columns: repeat(2, 48.5%);
+                column-gap: 3%;
+            }
+
+            @media @breakpointMobile {
+                display: block;
+            }
+
+            &-item {
+                @media @breakpointMobile {
+                    margin-bottom: 32px;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 16px;
+                }
+
+                &-button {
+                    display: block;
+                    background-color: #colors[btnBgColor];
+                    color: #fff;
+                    text-align: center;
+                    .padding();
+                    border-radius: 8px;
+                    margin-top: 8px;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #colors[btnBgHover];
+                    }
+                }
+            }
+        }
+    }
+}
